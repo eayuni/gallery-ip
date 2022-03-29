@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+         stage('git clone'){
+             steps{
+                 git 'https://github.com/eayuni/gallery-ip.git'
+             }
+         }
+         stage('Install dependecies'){
+             steps{
+                 sh 'npm install'
+             }
+         }
+         stage('deploy to heroku'){
+             steps{
+                 
+             }
+         }
+    }
+}
